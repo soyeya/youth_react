@@ -37,7 +37,6 @@ const WelfareDetails = () => {
     try{
        const res = await axios.get('http://localhost:3400/LoginList');
        const data = res.data;
-       console.log(`homeData`, data);
 
        if(data.length <= 0){
          return setUpdateLogin(false);
@@ -162,7 +161,7 @@ const WelfareDetails = () => {
         changeCondition();
         Api();
   
-    },[])
+    },[upDateLogi])
   
        return(
           <Page header={<Title title={'복지정책설명'}></Title>}

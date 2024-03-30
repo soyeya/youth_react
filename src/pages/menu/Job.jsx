@@ -69,8 +69,8 @@ const Job = () => {
                         arryContent01.push(result01);
                         arryContent02.push(result02);
                     }
-                    return finishLoading(), setData(arryContent01), setContent(arryContent02), setHref(`/details/job/${values}`);}
-
+                    return finishLoading(), setData(arryContent01), setContent(arryContent02), setHref(`/details/job/${values}`);
+                   }
                     }catch(err){
                       finishLoading();
                       arryContent01 = [], 
@@ -82,42 +82,44 @@ const Job = () => {
                     }
 
                     finishLoading();
-
-                  }}
-
-              const LogoutBtn = async() => {
-
-                if(!upDateLogin){
-                  return
-                }else{
-                    startLoading('로그아웃중...');
-                    try{
-                      const res = await axios.post('http://localhost:3400/Logout' , dataContent);
-                      const data = res.data;
-                      return finishLoading(), setUpdateLogin(false);
-                    }
-                    catch(err){
-                      finishLoading();
-                      console.log('err');
-                    }
-
-                    finishLoading();
+                  
+                  }
                 
-                }
+                };
+
+        const LogoutBtn = async() => {
+
+          if(!upDateLogin){
+            return
+          }else{
+            try{
+                startLoading('로그아웃중...');
+                const res = await axios.post('http://localhost:3400/Logout' , dataContent);
+                const data = res.data;
+                return finishLoading(), setUpdateLogin(false);
+              }
+              catch(err){
+                finishLoading();
+                console.log('err');
               }
 
-                useEffect(() => {
+              finishLoading();
+          
+          }
+        }
 
-                  changeCondition();
-                  onClick();
-                  
+        useEffect(() => {
 
-                },[data, content, upDateLogin])
+          changeCondition();
+          onClick();
+
+        },[data, content, upDateLogin])
 
     return(
-     <Page header={<Title title={'직업'} backURL={'/'}/>}
+      <>    
+       <Page header={<Title title={'직업'} backURL={'/'}/>}
        footer={ upDateLogin ? (<Navi loginUpload color onClick={LogoutBtn}/>) : (<Navi data={NaviDB.Info}></Navi>)}
-     >
+       >
         <Info 
         id={'job'} 
         data={selectDB.region} 
@@ -127,6 +129,7 @@ const Job = () => {
         name={href}
         />
      </Page>
+     </>
     )
 }
 

@@ -115,7 +115,7 @@ const Eductaion = () => {
      footer={ upDateLogin ? (<Navi loginUpload color onClick={LogoutBtn}/>) : (<Navi data={NaviDB.Info}></Navi>)}
      >
         <Info 
-        id={'job'} 
+        id={'education'} 
         data={selectDB.region} 
         onChange={(e) => onClick(e.target.value)}
         list01={data}

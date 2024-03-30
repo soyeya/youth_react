@@ -34,8 +34,8 @@ const Info = ({ id , data , onChange , list01, list02 , name}) => {
                     <form id="myForm">
                         <select form="myForm" id={id} onChange={onChange} name={id}>
                             {data.map((v,i) => {
-                            return <option key={id + i} value={v.name}>{v.name}</option>
-                            })}
+                            return ( <option key={id + i} value={v.name}>{v.name}</option>
+                            ) })}
                         </select>
                     </form>
                 </div>
@@ -44,10 +44,10 @@ const Info = ({ id , data , onChange , list01, list02 , name}) => {
                             <ul>
                                 <li className='list_title'><p>정책명</p></li>
                                 {open && (list.dataContent.map((v,i) => {
-                                      return <li key={'list' + i}>
+                                      return (<li key={'list' + i}>
                                              <span onClick={(e) => onClick(e.target)}>{list.dataList[i]}</span><p>{[v]}</p>
                                            </li>
-                                        }))
+                                )}))
                                }
                             </ul>
                         </div>

@@ -92,8 +92,8 @@ const Residence = () => {
             if(!upDateLogin){
               return
             }else{
-                startLoading('로그아웃중...');
-                try{
+              try{
+                  startLoading('로그아웃중...');
                   const res = await axios.post('http://localhost:3400/Logout' , dataContent);
                   const data = res.data;
                   return finishLoading(), setUpdateLogin(false);
