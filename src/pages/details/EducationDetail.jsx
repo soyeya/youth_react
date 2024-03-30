@@ -138,7 +138,6 @@ const EducationDetails = () => {
           return alert('이미 찜한 상품입니다');
         }else{
           letter.style.color = `#f00000`;
- 
           return alert('찜에 성공했습니다.');
         }
        }catch(err){

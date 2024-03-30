@@ -88,12 +88,12 @@ const WelfareDetails = () => {
   
        for(let i in data){
          
-          const data_title = data[i].polyBizSjnm._cdata;
-          const data_content = data[i].polyItcnCn._cdata;
-          const data_expire = data[i].bizPrdCn._cdata;
-          const data_administration = data[i].mngtMson._cdata;
-          const data_address = data[i].rqutProcCn._cdata;
-          const data_etct = data[i].etct._cdata;
+        const data_title = data[i].polyBizSjnm._cdata;
+        const data_content = data[i].polyItcnCn._cdata;
+        const data_expire = data[i].bizPrdCn._cdata;
+        const data_administration = data[i].mngtMson._cdata;
+        const data_address = data[i].rqutProcCn._cdata;
+        const data_etct = data[i].etct._cdata == null ?  '없음' : data[i].etct._cdata;
         
           arry01.title.push(data_title);
           arry01.content.push(data_content);
@@ -105,7 +105,7 @@ const WelfareDetails = () => {
   
           if(arry01.title[i] == values){
   
-            return  finishLoading(), 
+            return finishLoading(), 
             setInfo(arry01.content[i]),
             setExpire(arry01.expire[i]),
             setAdministration(arry01.administration[i]),
@@ -117,7 +117,7 @@ const WelfareDetails = () => {
       }
   
        }catch(err){
-        finishLoading(),
+        finishLoading();
         openDialog(<ErrorDialog />);
         return;
        }
@@ -141,7 +141,6 @@ const WelfareDetails = () => {
           return alert('이미 찜한 상품입니다');
         }else{
           letter.style.color = `#f00000`;
- 
           return alert('찜에 성공했습니다.');
         }
        }catch(err){
@@ -161,7 +160,7 @@ const WelfareDetails = () => {
         changeCondition();
         Api();
   
-    },[upDateLogi])
+    },[upDateLogin])
   
        return(
           <Page header={<Title title={'복지정책설명'}></Title>}

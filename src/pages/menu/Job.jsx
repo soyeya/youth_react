@@ -73,11 +73,11 @@ const Job = () => {
                    }
                     }catch(err){
                       finishLoading();
-                      arryContent01 = [], 
-                      arryContent02 = ['검색결과가 없습니다'],
-                      setData(arryContent01), 
-                      setContent(arryContent02),
-                      setHref('')
+                      arryContent01 = [];
+                      arryContent02 = ['검색결과가 없습니다'];
+                      setData(arryContent01);
+                      setContent(arryContent02);
+                      setHref('');
                       return;
                     }
 
