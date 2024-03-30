@@ -19,8 +19,8 @@ import MyList from './pages/MyList.jsx';
 
 function App() {
   return (
-    <LayoutControl.layoutControl>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>    
+    <LayoutControl.layoutControl basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>    
        <Routes>
         <Route path={'/'} element={<Home />} />
         <Route path={'/job'} element ={<Job /> } />
