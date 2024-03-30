@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/youth_react/static/css/main.03aaf53f.css",
-    "main.js": "/youth_react/static/js/main.db66fb32.js",
+    "main.js": "/youth_react/static/js/main.3fdb9d67.js",
     "index.html": "/youth_react/index.html",
     "main.03aaf53f.css.map": "/youth_react/static/css/main.03aaf53f.css.map",
-    "main.db66fb32.js.map": "/youth_react/static/js/main.db66fb32.js.map"
+    "main.3fdb9d67.js.map": "/youth_react/static/js/main.3fdb9d67.js.map"
   },
   "entrypoints": [
     "static/css/main.03aaf53f.css",
-    "static/js/main.db66fb32.js"
+    "static/js/main.3fdb9d67.js"
   ]
 }
