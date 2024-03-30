@@ -19,7 +19,7 @@ import MyList from './pages/MyList.jsx';
 
 function App() {
   return (
-    <LayoutControl.layoutControl basename={process.env.PUBLIC_URL}>
+    <LayoutControl.LayoutControl basename={process.env.PUBLIC_URL}>
     <BrowserRouter>    
        <Routes>
         <Route path={'/'} element={<Home />} />
@@ -38,7 +38,7 @@ function App() {
         <Route path={'/myList'} element ={<MyList /> } />
        </Routes>
     </BrowserRouter>
-       </LayoutControl.layoutControl>
+       </LayoutControl.LayoutControl>
 
   );
 }

@@ -6,7 +6,7 @@ import Dialog from '../components/Dialong';
 const layoutContext = createContext({});
 layoutContext.displayName = "LayoutContext";
 
-export const layoutControl = ({children}) => {
+export const LayoutControl = ({children}) => {
 
     const [ dialog, setDialog ] = useState();
 
