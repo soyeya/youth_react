@@ -33,9 +33,9 @@ const Info = ({ id , data , onChange , list01, list02 , name}) => {
                 <div className="formBox">
                     <form id="myForm">
                         <select form="myForm" id={id} onChange={onChange} name={id}>
-                            {data.map((v,i) => (
-                            <option key={id + i} value={v.name}>{v.name}</option>
-                            ))}
+                            {data.map((v,i) => {
+                            return <option key={id + i} value={v.name}>{v.name}</option>
+                            })}
                         </select>
                     </form>
                 </div>
@@ -43,11 +43,11 @@ const Info = ({ id , data , onChange , list01, list02 , name}) => {
                         <div className="listBox">
                             <ul>
                                 <li className='list_title'><p>정책명</p></li>
-                                {open && (list.dataContent.map((v,i) => (
-                                       <li key={'list' + i}>
+                                {open && (list.dataContent.map((v,i) => {
+                                      return <li key={'list' + i}>
                                              <span onClick={(e) => onClick(e.target)}>{list.dataList[i]}</span><p>{[v]}</p>
                                            </li>
-                                    )))
+                                        }))
                                }
                             </ul>
                         </div>

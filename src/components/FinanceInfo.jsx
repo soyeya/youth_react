@@ -7,10 +7,6 @@ const FinanceInfo = ({ id, onChange, data, dataName , name}) => {
     const list = { dataList : dataName };
     const navigate = useNavigate();
 
-    console.log(`dataname`, dataName);
-    console.log(`financeDetail`, list.dataList);
-    console.log(listup);
-
     const onClick = (e) => {
 
         const values = e.textContent;

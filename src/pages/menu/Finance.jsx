@@ -1,6 +1,5 @@
 import React , { useState, useEffect } from 'react';
 import axios from 'axios';
-import Info from '../../components/Info';
 import Page from '../../components/Page';
 import Title from '../../components/Title';
 import Navi from '../../components/Navi';
